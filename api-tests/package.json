@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "mocha"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "mocha": "^3.5.0"
+  }
+}

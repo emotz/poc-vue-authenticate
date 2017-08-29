@@ -1,0 +1,8 @@
+version: '3.2'
+
+services:
+  api-tests:
+    build: api-tests
+    volumes:
+      - ./api-tests:/src/api-tests
+      - /src/api-tests/node_modules

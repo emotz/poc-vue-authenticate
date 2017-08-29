@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "lint": "eslint . --format unix"
+    "lint": "eslint . --format unix",
+    "api-tests": "docker-compose run --rm api-tests"
   },
   "author": "emotz",
   "license": "MIT",
