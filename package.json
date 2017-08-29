@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "lint": "eslint . --format unix",
-    "api-tests": "docker-compose run --rm api-tests"
+    "api-tests": "docker-compose build api-tests && docker-compose run --rm api-tests",
+    "start": "docker-compose up --build backend frontend"
   },
   "author": "emotz",
   "license": "MIT",

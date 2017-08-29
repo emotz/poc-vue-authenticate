@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "webpack-runner --watch",
+    "start": "webpack-runner --watch --config webpack.config.js",
     "build": "webpack"
   },
   "dependencies": {
