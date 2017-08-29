@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import App from 'src/components/pva-app.vue';
 
+window.$ = window.jQuery = require('jquery');
+
 // import all files from `plugins` directory
 const req = require.context('./plugins/', true, /\.js$/);
 req.keys().forEach(req);

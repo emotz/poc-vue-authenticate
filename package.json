@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "eslint . --format unix",
     "api-tests": "docker-compose build api-tests && docker-compose run --rm api-tests",
-    "start": "docker-compose up --build backend frontend"
+    "start": "docker-compose build frontend && docker-compose build backend && docker-compose up --build backend frontend",
+    "clean": "docker-compose stop && docker-compose rm -f"
   },
   "author": "emotz",
   "license": "MIT",

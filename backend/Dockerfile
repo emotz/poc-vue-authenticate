@@ -1,5 +1,4 @@
 FROM poc-vue-authenticate/frontend as frontend
-RUN npm run build
 
 FROM node
 

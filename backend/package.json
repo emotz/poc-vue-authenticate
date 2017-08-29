@@ -4,6 +4,8 @@
     "watch": "nodemon src/index.js"
   },
   "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "express-async-errors": "^2.0.0",
     "winston": "^2.3.1"
