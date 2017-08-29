@@ -23,6 +23,10 @@ describe('REST', function () {
     it('should get user profile', async function () {
         await getUserProfile(config.base_url, data.user.id, data.user.access_token);
     });
+
+    it('should exchange short-lived token with long-lived token', async function () {
+        await exchangeShortToken(config.base_url, config.app_id, config.app_secret, data.user.access_token);
+    });
 });
 
 async function prepareFacebook() {
@@ -106,6 +110,25 @@ function getUserProfile(base_url, user_id, access_token) {
         return response.data;
     }).catch(function (err) {
         log.error("not got user profile", err.response.data);
+        throw err;
+    });
+}
+
+function exchangeShortToken(base_url, app_id, app_secret, short_token) {
+    return axios({
+        method: "get",
+        url: `${base_url}/oauth/access_token`,
+        params: {
+            grant_type: "fb_exchange_token",
+            client_id: app_id,
+            client_secret: app_secret,
+            fb_exchange_token: short_token
+        }
+    }).then(function (response) {
+        log.debug("exchanged short token", response.data);
+        return response.data;
+    }).catch(function (err) {
+        log.error("not exchanged short token", err.response.data);
         throw err;
     });
 }
