@@ -36,7 +36,6 @@ export default {
                 throw err;
             }
             notify.success("Got profile");
-            console.log(response);
             const profile = response.body;
             alert(JSON.stringify(profile));
         }
