@@ -4,14 +4,10 @@ Docker CE - https://docs.docker.com/engine/installation/
 
 # Build & Run
 
-```sh
-docker-compose up
-```
-
-or, to run with rebuilding images
+To run tests
 
 ```sh
-docker-compose up --build
+npm run api-tests
 ```
 
 # Description

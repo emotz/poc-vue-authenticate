@@ -14,7 +14,7 @@ describe('REST', function () {
 
     after(async function () {
         await cleanupFacebook(data);
-    })
+    });
 
     it('should pass', async function () {
         assert(true);
@@ -95,7 +95,7 @@ function deleteTestUser(base_url, user_id, access_token) {
     }).catch(function (err) {
         log.error("not deleted user", err.response.data);
         throw err;
-    })
+    });
 }
 
 function getUserProfile(base_url, user_id, access_token) {
